@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sketchy/bootstrap.min.css"
+  integrity="sha384-RxqHG2ilm4r6aFRpGmBbGTjsqwfqHOKy1ArsMhHusnRO47jcGqpIQqlQK/kmGy9R" crossorigin="anonymous">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메모</title>
+  <!-- 제이쿼리 사용 -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+  <!-- moment 사용 -->
+  <script src="moment.min.js"></script>
+  <script>
+
+    // 문서 로딩 완료 시
+    $(function () {
+      var curDate = moment().format('YYYY-MM-DD HH:mm:ss');
+      $('#createDate').attr('value', curDate);
+    });
+
+  </script>
+</head>
+<div align="center"><br>
+  <h1 class="text-danger">mememomo<img src="즐겁다.png" width="80" height="80"></h1>
+  <body>
+    <form method="post" action="/process/save">
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item" role="presentation">
+    </ul>
+    
+    <br>
+    <h3>메모하다</h3>
+    <form>
+      <td><input type="text" name="createDate" id="createDate" /></td>
+      <br>
+      <div class="form-group">
+        <label for="exampleTextarea" class="form-label mt-4">Write</label>
+        <textarea class="form-control" name="contents"  cols="90" rows="15" spellcheck="false" data-ms-editor="true"
+          style="width:580px" style="height:90px;"></textarea>
+      </div>
+      <button type="submit" class="btn btn-danger">Submit</button>
+      <button type="button" class="btn btn-success" onclick="location.href='index.html'">Home</button>
+      
+    </form>
+</div>
+</div>
+
+</div>
+</body>
+
+</html>
